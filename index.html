@@ -31,6 +31,14 @@
         <a href="#gallery">Gallery</a>
       </div>
       <a class="btn btn-primary" data-wa="nav_consult" href="#">Chat Now</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Open menu">☰</button>
+      <div class="nav-panel" id="nav-panel" hidden>
+        <a href="#why">Why Solar</a>
+        <a href="#comparison">Compare</a>
+        <a href="#financing">Financing</a>
+        <a href="#projects">Projects</a>
+        <a href="#gallery">Gallery</a>
+      </div>
     </nav>
   </header>
 
@@ -355,5 +363,46 @@
   </div>
 
   <script src="js/app.js"></script>
+  <script>
+    const navToggle = document.querySelector(".nav-toggle");
+    const navPanel = document.getElementById("nav-panel");
+
+    if (navToggle && navPanel) {
+      const closeNavPanel = () => {
+        navPanel.hidden = true;
+        navToggle.setAttribute("aria-expanded", "false");
+      };
+
+      const openNavPanel = () => {
+        navPanel.hidden = false;
+        navToggle.setAttribute("aria-expanded", "true");
+      };
+
+      navToggle.addEventListener("click", () => {
+        const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+        if (isOpen) {
+          closeNavPanel();
+        } else {
+          openNavPanel();
+        }
+      });
+
+      navPanel.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => closeNavPanel());
+      });
+
+      document.addEventListener("click", (event) => {
+        if (!navPanel.hidden && !event.target.closest(".nav")) {
+          closeNavPanel();
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          closeNavPanel();
+        }
+      });
+    }
+  </script>
 </body>
 </html>
