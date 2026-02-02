@@ -1,13 +1,13 @@
 const ASSETS = {
-  logo: "assets/img/logo.png",
-  heroVideo: "assets/video/hero.mp4",
-  heroPoster: "assets/img/hero-poster.jpg",
-  financingImage: "assets/img/financing.jpg",
-  whyGoSolar: "assets/img/why-go-solar.png",
-  solarExplainerVideo: "assets/video/solar-explainer.mp4",
-  solarExplainerPoster: "assets/img/solar-explainer-poster.jpg",
-  projectsStripVideo: "assets/video/projects.mp4",
-  projectsStripPoster: "assets/img/projects-strip-poster.jpg"
+  logo: "https://res.cloudinary.com/dd8pjjxsm/image/upload/v1770020328/ChatGPT_Image_Jan_20_2026_11_48_57_AM_ibqw3k.png",
+  heroVideo: "https://res.cloudinary.com/dd8pjjxsm/video/upload/v1770019435/From_KlickPin_CF_Pin_on_Portfolio_g9dtlr.mp4",
+  heroPoster: "https://res.cloudinary.com/dd8pjjxsm/image/upload/v1770020789/Solar_Energy_Poster_Ideas_r4xqin.jpg",
+  financingImage: "https://res.cloudinary.com/dd8pjjxsm/image/upload/v1770020328/ChatGPT_Image_Jan_20_2026_10_14_05_AM_pys2gj.png",
+  whyGoSolar: "https://res.cloudinary.com/dd8pjjxsm/image/upload/v1770020328/ChatGPT_Image_Jan_20_2026_09_58_37_AM_clnnrw.png",
+  solarExplainerVideo: "https://res.cloudinary.com/dd8pjjxsm/video/upload/v1770020838/From_KlickPin_CF_Operation_process_of_energy-saving_solar_energy_system_batteryenergystoragesystem_Video___Solar_energy_projects_Solar_energy_system_Solar_power_calculator_vwxk7s.mp4",
+  solarExplainerPoster: "https://res.cloudinary.com/dd8pjjxsm/image/upload/v1770020820/Off-Grid_Solar__How_Many_Panels_Do_You_Really_Need__hihgaj.jpg",
+  projectsStripVideo: "https://res.cloudinary.com/dd8pjjxsm/video/upload/v1770020829/From_KlickPin_CF_Pin_de_Davi_Sousa_em_Arquitetura___Sobre_energia_solar_Energia_solar_Fotovoltaica_w08jt2.mp4",
+  projectsStripPoster: "https://res.cloudinary.com/dd8pjjxsm/image/upload/v1770020844/Enjoying_The_Sunset_on_our_Recent_Commercial_Solar_Installation_n9sbhp.jpg"
 };
 
 function bindAssets() {
