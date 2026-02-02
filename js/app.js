@@ -243,6 +243,41 @@ function buildGalleryCard(item, index, isFeatured = false) {
   return button;
 }
 
+function buildFlipTile(item, index) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "flip-tile";
+  button.dataset.index = String(index);
+  button.innerHTML = `
+    <span class="flip-inner">
+      <span class="flip-front">
+        <img src="${item.image}" alt="${item.alt}" loading="lazy" />
+      </span>
+      <span class="flip-back">
+        <span class="flip-meta">
+          <strong>${item.title}</strong>
+          <small>${item.location}</small>
+        </span>
+      </span>
+    </span>
+  `;
+  return button;
+}
+
+function renderGallerySkeleton() {
+  const grid = document.getElementById("gallery-grid");
+  if (!grid) return;
+  grid.innerHTML = "";
+  const skeleton = document.createElement("div");
+  skeleton.className = "gallery-skeleton";
+  for (let i = 0; i < 6; i += 1) {
+    const tile = document.createElement("div");
+    tile.className = "gallery-skeleton__tile";
+    skeleton.appendChild(tile);
+  }
+  grid.appendChild(skeleton);
+}
+
 function renderGallery(items) {
   const featuredContainer = document.getElementById("featured-gallery");
   const recentStrip = document.getElementById("recent-strip");
@@ -273,8 +308,8 @@ function renderGallery(items) {
   });
 
   items.forEach((item, index) => {
-    const card = buildGalleryCard(item, index);
-    grid.appendChild(card);
+    const tile = buildFlipTile(item, index);
+    grid.appendChild(tile);
   });
 
   observeNewReveals(document);
@@ -386,6 +421,7 @@ document.addEventListener("keydown", (event) => {
 
 async function loadGallery() {
   try {
+    renderGallerySkeleton();
     const response = await fetch("data/gallery.json");
     if (!response.ok) throw new Error("Gallery not available");
     const items = await response.json();
@@ -397,3 +433,65 @@ async function loadGallery() {
 }
 
 loadGallery();
+
+const scrollCue = document.querySelector(".scroll-cue");
+if (scrollCue) {
+  let scrollCueHidden = false;
+  let scrollCueTicking = false;
+  const handleScrollCue = () => {
+    if (scrollCueHidden) return;
+    if (window.scrollY > 40) {
+      scrollCue.classList.add("is-hidden");
+      scrollCueHidden = true;
+      window.removeEventListener("scroll", onScrollCue);
+    }
+    scrollCueTicking = false;
+  };
+  const onScrollCue = () => {
+    if (scrollCueTicking) return;
+    scrollCueTicking = true;
+    window.requestAnimationFrame(handleScrollCue);
+  };
+  window.addEventListener("scroll", onScrollCue, { passive: true });
+}
+
+const waSticky = document.getElementById("wa-sticky");
+const waStickyClose = waSticky ? waSticky.querySelector(".wa-sticky__close") : null;
+const WA_STICKY_DISMISS_KEY = "waStickyDismissed";
+
+if (waSticky) {
+  let waStickyTicking = false;
+  const updateSticky = () => {
+    const dismissed = sessionStorage.getItem(WA_STICKY_DISMISS_KEY) === "1";
+    if (dismissed) {
+      waSticky.classList.remove("is-visible");
+      waSticky.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("wa-sticky-visible");
+      waStickyTicking = false;
+      return;
+    }
+    const shouldShow = window.scrollY > 240;
+    waSticky.classList.toggle("is-visible", shouldShow);
+    waSticky.setAttribute("aria-hidden", shouldShow ? "false" : "true");
+    document.body.classList.toggle("wa-sticky-visible", shouldShow);
+    waStickyTicking = false;
+  };
+
+  const onScrollSticky = () => {
+    if (waStickyTicking) return;
+    waStickyTicking = true;
+    window.requestAnimationFrame(updateSticky);
+  };
+
+  window.addEventListener("scroll", onScrollSticky, { passive: true });
+  updateSticky();
+}
+
+if (waStickyClose) {
+  waStickyClose.addEventListener("click", () => {
+    sessionStorage.setItem(WA_STICKY_DISMISS_KEY, "1");
+    waSticky.classList.remove("is-visible");
+    waSticky.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("wa-sticky-visible");
+  });
+}
