@@ -1,0 +1,58 @@
+[
+  {
+    "id": "project-01",
+    "title": "Kingston Rooftop",
+    "location": "Kingston, Jamaica",
+    "image": "assets/img/projects/project-01.jpg",
+    "alt": "Solar panels on a Kingston home"
+  },
+  {
+    "id": "project-02",
+    "title": "St. Andrew Family Home",
+    "location": "St. Andrew, Jamaica",
+    "image": "assets/img/projects/project-02.jpg",
+    "alt": "Residential solar array on a modern home"
+  },
+  {
+    "id": "project-03",
+    "title": "Portmore Bungalow",
+    "location": "Portmore, Jamaica",
+    "image": "assets/img/projects/project-03.jpg",
+    "alt": "Solar installation on a bungalow rooftop"
+  },
+  {
+    "id": "project-04",
+    "title": "Montego Bay Coastal",
+    "location": "Montego Bay, Jamaica",
+    "image": "assets/img/projects/project-04.jpg",
+    "alt": "Solar panels with coastal home backdrop"
+  },
+  {
+    "id": "project-05",
+    "title": "Spanish Town Upgrade",
+    "location": "Spanish Town, Jamaica",
+    "image": "assets/img/projects/project-05.jpg",
+    "alt": "Solar system installed on a Spanish Town home"
+  },
+  {
+    "id": "project-06",
+    "title": "St. Catherine Family",
+    "location": "St. Catherine, Jamaica",
+    "image": "assets/img/projects/project-06.jpg",
+    "alt": "Family home solar panels in St. Catherine"
+  },
+  {
+    "id": "project-07",
+    "title": "Mandeville Hillside",
+    "location": "Mandeville, Jamaica",
+    "image": "assets/img/projects/project-07.jpg",
+    "alt": "Solar panels on a hillside property"
+  },
+  {
+    "id": "project-08",
+    "title": "Ocho Rios Retreat",
+    "location": "Ocho Rios, Jamaica",
+    "image": "assets/img/projects/project-08.jpg",
+    "alt": "Solar array near a tropical retreat"
+  }
+]

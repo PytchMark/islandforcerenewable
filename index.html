@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Island Force Renewables | Solar Power Movement</title>
-  <meta name="description" content="Island Force Renewables helps Jamaica homeowners take control of their power with calm, intelligent solar guidance." />
+  <title>Island Force Renewables | Own Your Power</title>
+  <meta name="description" content="Island Force Renewables helps Jamaica homeowners own their power with simple, calm solar guidance." />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,24 +18,40 @@
     <a class="btn btn-primary" data-wa="mobile_recommendation" href="#">Get a Recommendation</a>
   </div>
 
-  <header class="hero">
-    <video class="hero-video" autoplay muted loop playsinline poster="HERO_POSTER_URL" aria-hidden="true">
-      <source src="HERO_VIDEO_URL" type="video/mp4" />
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Primary">
+      <a class="logo" href="#top">
+        <img data-asset="logo" alt="Island Force Renewables" />
+      </a>
+      <div class="nav-links">
+        <a href="#why">Why Solar</a>
+        <a href="#comparison">Compare</a>
+        <a href="#financing">Financing</a>
+        <a href="#projects">Projects</a>
+        <a href="#gallery">Gallery</a>
+      </div>
+      <a class="btn btn-primary" data-wa="nav_consult" href="#">Chat Now</a>
+    </nav>
+  </header>
+
+  <header class="hero" aria-labelledby="hero-title">
+    <video class="hero-video" autoplay muted loop playsinline data-asset="heroPoster" aria-hidden="true">
+      <source data-asset="heroVideo" type="video/mp4" />
     </video>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <p class="eyebrow">Island Force Renewables</p>
-      <h1>Take Control of Your Power.</h1>
-      <p class="subhead">Plug Into the Sun.</p>
-      <p class="supporting">Solar isn’t just about panels. It’s about owning how energy works in your life.</p>
+      <h1 id="hero-title">Own your power. Calm, simple solar.</h1>
+      <p class="subhead">Trade monthly bills for long-term peace of mind.</p>
+      <p class="supporting">We design solar around how your home actually uses energy — so the numbers feel clear and the experience feels easy.</p>
       <div class="hero-cta-group" data-reveal>
-        <a class="btn btn-primary" data-wa="hero_primary" href="#">Go Solar Now</a>
-        <a class="btn btn-secondary" data-wa="hero_secondary" href="#">Join the Movement</a>
+        <a class="btn btn-primary" data-wa="hero_primary" href="#">Start My Solar Plan</a>
+        <a class="btn btn-secondary" data-wa="hero_secondary" href="#">Talk to a Designer</a>
       </div>
       <div class="trust-chips" data-reveal>
-        <span>Warranty-backed equipment</span>
         <span>Local install team</span>
-        <span>Design-first approach</span>
+        <span>Clear pricing guidance</span>
+        <span>Warranty-backed systems</span>
       </div>
       <div class="scroll-cue" aria-hidden="true">
         <span></span>
@@ -45,108 +61,100 @@
 
   <main id="main">
     <section class="section sub-hero" aria-labelledby="sub-hero-title">
-      <div class="container">
-        <h2 id="sub-hero-title" class="reveal">Solar with a calmer math.</h2>
-        <p class="typing-line" data-typing data-final="Solar doesn’t eliminate monthly payments. It changes what those payments do for you." aria-live="polite">
+      <div class="container card-surface">
+        <h2 id="sub-hero-title" class="reveal">Solar with calmer math.</h2>
+        <p class="typing-line" data-typing data-final="Solar doesn’t erase monthly payments. It turns them into ownership." aria-live="polite">
           <span class="typing-text"></span>
         </p>
-        <p class="subline reveal">We help homeowners reduce bills, design smarter systems, and take control of how power works in their home.</p>
+        <p class="subline reveal">We help homeowners reduce bills, design smarter systems, and feel in control of their power journey.</p>
         <a class="btn btn-primary btn-pulse" data-wa="see_difference" data-modal-open href="#">See the Difference</a>
       </div>
     </section>
 
-    <section class="section comparison" aria-labelledby="comparison-title">
+    <section class="section why" id="why" aria-labelledby="why-title">
+      <div class="container grid-two">
+        <div class="surface-card reveal">
+          <h2 id="why-title" class="section-title">Why homeowners choose solar now.</h2>
+          <p>Solar gives you a stable monthly plan, more comfort at home, and a system you actually own.</p>
+          <ul class="check-list">
+            <li>Lower bills without guessing each month.</li>
+            <li>Keep power running during outages.</li>
+            <li>Increase home value with clean energy.</li>
+          </ul>
+        </div>
+        <div class="surface-card media-card reveal">
+          <img data-asset="whyGoSolar" alt="Solar panels on a Jamaican home" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section comparison" id="comparison" aria-labelledby="comparison-title">
       <div class="container">
         <h2 id="comparison-title" class="section-title reveal">Monthly cost, different outcomes.</h2>
         <div class="comparison-grid">
           <article class="card reveal">
-            <h3>Monthly Electricity Payment</h3>
+            <h3>Monthly Payments (Light Bill)</h3>
             <ul>
-              <li>Pay every month</li>
-              <li>Prices change without warning</li>
-              <li>No ownership</li>
-              <li>No long-term benefit</li>
-              <li>Money is gone once paid</li>
+              <li>Payment leaves your budget every month.</li>
+              <li>Rates rise without warning.</li>
+              <li>No ownership to show for it.</li>
+              <li>Still tied to the utility’s schedule.</li>
             </ul>
           </article>
           <article class="card reveal">
-            <h3>Monthly Solar Payment</h3>
+            <h3>No Monthly Bill (Solar Ownership)</h3>
             <ul>
-              <li>Predictable payment</li>
-              <li>You own the system</li>
-              <li>Power becomes an asset</li>
-              <li>Reduced reliance on utility</li>
-              <li>Long-term savings stack</li>
+              <li>Monthly costs move toward owning your system.</li>
+              <li>Predictable plan, with support.</li>
+              <li>Energy becomes a home asset.</li>
+              <li>More independence day to day.</li>
             </ul>
           </article>
         </div>
-        <p class="microcopy reveal">Same habit. Different outcome.</p>
+        <p class="microcopy reveal">Honest note: some homeowners finance at first, but the goal is a lower bill long-term.</p>
+      </div>
+    </section>
+
+    <section class="section financing" id="financing" aria-labelledby="financing-title">
+      <div class="container grid-two">
+        <div class="surface-card reveal">
+          <h2 id="financing-title" class="section-title">Financing that feels lighter.</h2>
+          <p>We’ll map a plan around your monthly comfort. You can start with a deposit, finance part of the system, or compare both.</p>
+          <div class="selector" role="group" aria-label="Financing preference">
+            <button class="selector-btn" data-selector="lower">I’d prefer a lower monthly payment</button>
+            <button class="selector-btn" data-selector="deposit">I want to start with a deposit</button>
+            <button class="selector-btn" data-selector="both">I want to explore both</button>
+          </div>
+          <p class="selector-output" aria-live="polite"></p>
+        </div>
+        <div class="surface-card media-card reveal">
+          <img data-asset="financingImage" alt="Homeowners reviewing a solar plan" />
+        </div>
       </div>
     </section>
 
     <section class="section education" aria-labelledby="education-title">
-      <div class="container">
-        <h2 id="education-title" class="section-title reveal">Solar isn’t magic. It’s math.</h2>
-        <ul class="icon-list">
-          <li class="reveal">
-            <span class="icon">☀️</span>
-            Panels generate power
-          </li>
-          <li class="reveal">
-            <span class="icon">⚡</span>
-            Inverter converts it
-          </li>
-          <li class="reveal">
-            <span class="icon">🔋</span>
-            Batteries store it
-          </li>
-          <li class="reveal">
-            <span class="icon">📈</span>
-            Monitoring shows performance
-          </li>
-          <li class="reveal">
-            <span class="icon">🔌</span>
-            Utility stays as backup
-          </li>
-        </ul>
-        <p class="humor reveal">Think of it as a hybrid system — solar first, backup when needed.</p>
-      </div>
-    </section>
-
-    <section class="section savings" aria-labelledby="savings-title">
-      <div class="container">
-        <h2 id="savings-title" class="section-title reveal">How much can solar reduce your bill?</h2>
-        <div class="savings-bars">
-          <div class="bar reveal" style="--value: 60%"><span>60%</span></div>
-          <div class="bar reveal" style="--value: 80%"><span>80%</span></div>
-          <div class="bar reveal" style="--value: 90%"><span>90%</span></div>
-          <div class="bar reveal" style="--value: 95%"><span>95%+</span></div>
+      <div class="container grid-two">
+        <div class="surface-card reveal">
+          <h2 id="education-title" class="section-title">Solar isn’t magic. It’s a simple system.</h2>
+          <p>We explain every piece in plain language so you always know what you’re paying for.</p>
+          <ul class="icon-list">
+            <li><span class="icon">☀️</span> Panels capture sunlight.</li>
+            <li><span class="icon">⚡</span> Inverters make it usable.</li>
+            <li><span class="icon">🔋</span> Batteries store it for later.</li>
+            <li><span class="icon">📊</span> Monitoring keeps you informed.</li>
+            <li><span class="icon">🔌</span> The grid backs you up.</li>
+          </ul>
         </div>
-        <p class="microcopy reveal">Savings depend on usage and system design. That’s why we don’t guess — we design.</p>
-        <a class="btn btn-secondary" data-wa="savings" href="#">See My Potential Savings</a>
-      </div>
-    </section>
-
-    <section class="section advisor" aria-labelledby="advisor-title">
-      <div class="container">
-        <h2 id="advisor-title" class="section-title reveal">Solar works best when it’s designed around how you live.</h2>
-        <div class="advisor-copy">
-          <p class="reveal">Panels don’t save money on their own. Systems do.</p>
-          <p class="reveal">Our role is to help you understand: what you use, what you actually need, and what makes financial sense.</p>
+        <div class="surface-card media-card reveal">
+          <div class="video-stack">
+            <video class="inline-video" autoplay muted loop playsinline data-asset="solarExplainerPoster">
+              <source data-asset="solarExplainerVideo" type="video/mp4" />
+            </video>
+            <button class="video-toggle" type="button" data-video-toggle aria-pressed="false">Unmute video</button>
+          </div>
+          <p class="small-copy">A quick walkthrough of how a modern home system works.</p>
         </div>
-      </div>
-    </section>
-
-    <section class="section finance" aria-labelledby="finance-title">
-      <div class="container">
-        <h2 id="finance-title" class="section-title reveal">You don’t need to finance everything.</h2>
-        <p class="reveal">A deposit plus financing up to 80% keeps monthly costs lighter and reduces stress.</p>
-        <div class="selector" role="group" aria-label="Financing preference">
-          <button class="selector-btn" data-selector="lower">I’d prefer a lower monthly payment</button>
-          <button class="selector-btn" data-selector="deposit">I want to start with a deposit</button>
-          <button class="selector-btn" data-selector="both">I want to explore both</button>
-        </div>
-        <p class="selector-output" aria-live="polite"></p>
       </div>
     </section>
 
@@ -156,86 +164,115 @@
         <div class="card-grid">
           <article class="card reveal">
             <div class="badge">Available Now</div>
-            <h3>NHT Solar Loans</h3>
-            <p><strong>Best for:</strong> homeowners seeking structured monthly plans.</p>
-            <p><strong>What homeowners usually do:</strong> combine a deposit with steady payments.</p>
+            <h3>Homeowner Solar Loans</h3>
+            <p>Structured payments with clear terms and no surprises.</p>
           </article>
           <article class="card reveal">
             <div class="badge">Available Now</div>
-            <h3>Bank Solar Financing</h3>
-            <p><strong>Best for:</strong> clients who want a familiar bank process.</p>
-            <p><strong>What homeowners usually do:</strong> compare rates and lock a predictable term.</p>
+            <h3>Bank Financing</h3>
+            <p>Use a bank you already trust, with steady monthly costs.</p>
           </article>
           <article class="card reveal">
             <div class="badge">Available Now</div>
-            <h3>Private Financing Partners</h3>
-            <p><strong>Best for:</strong> flexibility and faster approvals.</p>
-            <p><strong>What homeowners usually do:</strong> choose custom payment plans around cash flow.</p>
+            <h3>Flexible Partners</h3>
+            <p>Creative options for timing, deposits, and approvals.</p>
           </article>
         </div>
         <a class="btn btn-primary" data-wa="financing_qualify" href="#">Check Which Options I Qualify For</a>
       </div>
     </section>
 
-    <section class="section cash" aria-labelledby="cash-title">
+    <section class="section projects" id="projects" aria-labelledby="projects-title">
+      <div class="projects-strip">
+        <video class="strip-video" autoplay muted loop playsinline data-asset="projectsStripPoster" aria-hidden="true">
+          <source data-asset="projectsStripVideo" type="video/mp4" />
+        </video>
+        <div class="projects-strip-overlay"></div>
+        <div class="container projects-strip-content">
+          <h2 id="projects-title">Projects built around real homes.</h2>
+          <p>Every system is tuned to daily habits, appliances, and comfort goals.</p>
+        </div>
+      </div>
       <div class="container">
-        <h2 id="cash-title" class="section-title reveal">Some homeowners prefer to plan first.</h2>
-        <p class="reveal">Saving is preparation. We can align your timeline with a system that fits your goals.</p>
-        <div class="tag-list">
-          <a class="tag-button" data-wa="cash_saving" href="#">I’m saving up</a>
-          <a class="tag-button" data-wa="cash_partial" href="#">I have part of the budget ready</a>
-          <a class="tag-button" data-wa="cash_timing" href="#">I want guidance on timing</a>
+        <div class="card-grid">
+          <article class="card reveal">
+            <h3>Usage-first designs</h3>
+            <p>We plan around how you live, not generic packages.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Battery-ready setups</h3>
+            <p>Plan for backup power and better resilience.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Clear, calm guidance</h3>
+            <p>We keep the process organized and easy to follow.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section process" aria-labelledby="process-title">
+    <section class="section gallery" id="gallery" aria-labelledby="gallery-title">
       <div class="container">
-        <h2 id="process-title" class="section-title reveal">Here’s what usually happens next.</h2>
-        <div class="steps">
-          <div class="step reveal">
-            <span class="step-icon">1</span>
-            <p>Review usage</p>
+        <h2 id="gallery-title" class="section-title reveal">See the work up close.</h2>
+        <div class="gallery-feature" id="featured-gallery"></div>
+        <div class="recent-strip" id="recent-strip"></div>
+        <div class="gallery-grid" id="gallery-grid"></div>
+      </div>
+    </section>
+
+    <section class="section process" aria-labelledby="process-title">
+      <div class="container grid-two">
+        <div class="surface-card reveal">
+          <h2 id="process-title" class="section-title">Here’s what happens next.</h2>
+          <div class="steps">
+            <div class="step reveal">
+              <span class="step-icon">1</span>
+              <p>Share your bill and goals.</p>
+            </div>
+            <div class="step reveal">
+              <span class="step-icon">2</span>
+              <p>We design your system.</p>
+            </div>
+            <div class="step reveal">
+              <span class="step-icon">3</span>
+              <p>Confirm the best payment path.</p>
+            </div>
+            <div class="step reveal">
+              <span class="step-icon">4</span>
+              <p>Install and walkthrough.</p>
+            </div>
           </div>
-          <div class="step reveal">
-            <span class="step-icon">2</span>
-            <p>Design system</p>
-          </div>
-          <div class="step reveal">
-            <span class="step-icon">3</span>
-            <p>Confirm financing path</p>
-          </div>
-          <div class="step reveal">
-            <span class="step-icon">4</span>
-            <p>Secure install window (2–3 weeks out)</p>
-          </div>
+        </div>
+        <div class="surface-card media-card reveal">
+          <img data-asset="whyGoSolar" alt="Solar system on a bright home exterior" />
         </div>
       </div>
     </section>
 
     <section class="section testimonials" aria-labelledby="testimonials-title">
       <div class="container">
-        <h2 id="testimonials-title" class="section-title reveal">Most homeowners say the same thing.</h2>
+        <h2 id="testimonials-title" class="section-title reveal">What homeowners tell us.</h2>
         <div class="card-grid">
           <article class="card reveal">
-            <p>“The clarity was immediate. We understood the numbers before committing.”</p>
-            <span>— Clarified expectations</span>
+            <p>“The plan felt simple. We understood the numbers right away.”</p>
+            <span>— Clarity first</span>
           </article>
           <article class="card reveal">
-            <p>“The process was smoother than we expected, with calm guidance throughout.”</p>
-            <span>— Smooth process</span>
+            <p>“The team kept us calm and updated through every step.”</p>
+            <span>— Guided well</span>
           </article>
           <article class="card reveal">
-            <p>“I wish we started sooner. Our bill feels lighter and more predictable.”</p>
-            <span>— Earlier action</span>
+            <p>“Our bill already feels lighter, and the house is more comfortable.”</p>
+            <span>— Happy homeowners</span>
           </article>
         </div>
       </div>
     </section>
 
     <section class="section final-cta" aria-labelledby="final-cta-title">
-      <div class="container">
-        <h2 id="final-cta-title" class="section-title reveal">Want a recommendation built around you?</h2>
+      <div class="container surface-card reveal">
+        <h2 id="final-cta-title" class="section-title">Want a recommendation built around you?</h2>
+        <p>Tell us about your home and we’ll map a clear next step.</p>
         <a class="btn btn-primary btn-pulse" data-wa="final_reco" href="#">Design My Solar Options</a>
       </div>
     </section>
@@ -287,6 +324,22 @@
         </button>
       </div>
       <a class="btn btn-primary" data-wa="modal_complete" href="#">Okay, Show Me What’s Possible</a>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="lightbox-title">
+    <div class="lightbox-overlay" data-lightbox-close></div>
+    <div class="lightbox-content" role="document">
+      <button class="lightbox-close" aria-label="Close gallery" data-lightbox-close>&times;</button>
+      <button class="lightbox-nav prev" type="button" aria-label="Previous image" data-lightbox-prev>‹</button>
+      <figure>
+        <img id="lightbox-image" alt="" />
+        <figcaption>
+          <h3 id="lightbox-title"></h3>
+          <p id="lightbox-caption"></p>
+        </figcaption>
+      </figure>
+      <button class="lightbox-nav next" type="button" aria-label="Next image" data-lightbox-next>›</button>
     </div>
   </div>
 

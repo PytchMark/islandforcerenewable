@@ -1,59 +1,82 @@
-# Island Force Renewables — Solar Power Movement Funnel
+# Island Force Renewables (GitHub Pages)
 
-Premium, single-page funnel for Island Force Renewables (Jamaica solar). Built with static HTML/CSS/JS for GitHub Pages.
+This project is a fully static GitHub Pages build of the Island Force Renewables funnel. All media paths are wired through a single `ASSETS` object in `js/app.js`, so the site works on plain static hosting without environment variables.
 
-## Project Structure
+## File Structure
+
 ```
-.
-├── index.html
-├── css/
-│   └── styles.css
-├── js/
-│   └── app.js
-└── assets/
-    └── README.md
+/
+  index.html
+  /assets
+    /img
+      logo.png
+      hero-poster.jpg
+      financing.jpg
+      why-go-solar.png
+      solar-explainer-poster.jpg
+      projects-strip-poster.jpg
+      /projects
+        project-01.jpg
+        project-02.jpg
+        project-03.jpg
+        project-04.jpg
+        project-05.jpg
+        project-06.jpg
+        project-07.jpg
+        project-08.jpg
+    /video
+      hero.mp4
+      projects.mp4
+      solar-explainer.mp4
+  /css
+    styles.css
+  /js
+    app.js
+  /data
+    gallery.json
+  README.md
 ```
 
-## Replace Assets
-**Hero video + poster**
-1. Open `index.html`.
-2. Replace the placeholders:
-   - `HERO_VIDEO_URL` → your hosted MP4 URL (or `assets/hero-video.mp4`).
-   - `HERO_POSTER_URL` → your image URL (or `assets/hero-poster.jpg`).
+## Deploy to GitHub Pages
 
-## WhatsApp Configuration
-Open `js/app.js` and update:
+1. Commit the project to a GitHub repository.
+2. In GitHub, go to **Settings → Pages**.
+3. Under **Build and deployment**, choose **Deploy from a branch**.
+4. Select your default branch (usually `main`) and the `/root` folder.
+5. Save. GitHub Pages will publish the site at `https://<username>.github.io/<repo>/`.
+
+## Replace Media Assets
+
+Update paths in the `ASSETS` object inside `js/app.js`:
+
 ```js
-const WHATSAPP_NUMBER = "1876XXXXXXX";
+const ASSETS = {
+  logo: "assets/img/logo.png",
+  heroVideo: "assets/video/hero.mp4",
+  heroPoster: "assets/img/hero-poster.jpg",
+  financingImage: "assets/img/financing.jpg",
+  whyGoSolar: "assets/img/why-go-solar.png",
+  solarExplainerVideo: "assets/video/solar-explainer.mp4",
+  solarExplainerPoster: "assets/img/solar-explainer-poster.jpg",
+  projectsStripVideo: "assets/video/projects.mp4",
+  projectsStripPoster: "assets/img/projects-strip-poster.jpg"
+};
 ```
-Use E.164 without the `+` (e.g., `18765551234`). All CTA buttons use `data-wa` keys that map to messages in `waMessages`.
 
-## CTA Map (data-wa → message)
-| Key | Message |
-| --- | --- |
-| `hero_primary` | Hi Island Force Renewables — I’m ready to take control of my power. Can we talk about going solar? |
-| `hero_secondary` | Hi — I want to join the solar movement. What’s the best first step? |
-| `mobile_chat` | Hi — I’d like to chat on WhatsApp about solar for my home. |
-| `mobile_recommendation` | Hi — I’m ready for a recommendation. What should I share to get started? |
-| `see_difference` | Hi — I clicked ‘See the Difference’. Can you explain the monthly payment comparison for my home? |
-| `modal_complete` | Hi — I reviewed the utility vs solar breakdown. Okay, show me what’s possible for my home. |
-| `savings` | Hi — I want to see my potential savings. My estimated monthly light bill is: ____ and I’m located in ____. |
-| `financing_qualify` | Hi — I’d like to check financing options I may qualify for. I prefer: (lower monthly payment / deposit / both). |
-| `cash_saving` | Hi — I’m planning my solar project. I’m currently saving up and want guidance on timing. |
-| `cash_partial` | Hi — I have part of my solar budget ready and want guidance on the next steps. |
-| `cash_timing` | Hi — I want guidance on the right timing for my solar project. |
-| `final_reco` | Hi — I’d like a solar recommendation. Parish: ____. Residential/Commercial: ____. Monthly bill range: ____. Financing interest: ____. |
+Place your replacement files in the same locations listed above so GitHub Pages works out of the box.
 
-## GitHub Pages Deployment
-1. Commit and push the repository to GitHub.
-2. In the repo settings, go to **Pages**.
-3. Set **Source** to `Deploy from a branch`.
-4. Choose `main` branch and `/ (root)` folder.
-5. Save. Your site will publish in a few minutes.
+## Add More Gallery Items
 
-## Local Preview
-Open `index.html` directly in a browser, or run a simple server:
-```bash
-python -m http.server 8080
+Update `data/gallery.json` with additional entries. Each item should include:
+
+```json
+{
+  "id": "project-09",
+  "title": "Example Project",
+  "location": "Parish, Jamaica",
+  "image": "assets/img/projects/project-09.jpg",
+  "alt": "Short accessible description"
+}
 ```
-Then visit `http://localhost:8080`.
+
+The gallery automatically renders a featured item, a recent strip, and the full grid from this file.
