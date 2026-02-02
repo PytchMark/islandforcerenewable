@@ -3,7 +3,7 @@
     "id": "project-01",
     "title": "Kingston Rooftop",
     "location": "Kingston, Jamaica",
-    "image": "assets/img/projects/project-01.jpg",
+    "image": "https://res.cloudinary.com/dd8pjjxsm/image/upload/v1770020789/Solar_Energy_Poster_Ideas_r4xqin.jpg",
     "alt": "Solar panels on a Kingston home"
   },
   {
